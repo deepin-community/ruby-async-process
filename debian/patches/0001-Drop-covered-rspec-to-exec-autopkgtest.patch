@@ -1,0 +1,31 @@
+From: Hideki Yamane <henrich@debian.org>
+Date: Sun, 29 Aug 2021 01:49:01 +0900
+Subject: Drop covered/rspec to exec autopkgtest
+
+---
+ async-process.gemspec | 1 -
+ spec/spec_helper.rb   | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/async-process.gemspec b/async-process.gemspec
+index c35b003..97cbdf1 100644
+--- a/async-process.gemspec
++++ b/async-process.gemspec
+@@ -18,6 +18,5 @@ Gem::Specification.new do |spec|
+ 	
+ 	spec.add_development_dependency "async-rspec", "~> 1.1"
+ 	spec.add_development_dependency "bundler"
+-	spec.add_development_dependency "covered"
+ 	spec.add_development_dependency "rspec", "~> 3.0"
+ end
+diff --git a/spec/spec_helper.rb b/spec/spec_helper.rb
+index efc7c55..4811b9a 100644
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -1,6 +1,5 @@
+ 
+ require "bundler/setup"
+-require "covered/rspec"
+ 
+ # Shared rspec helpers:
+ require "async/rspec"

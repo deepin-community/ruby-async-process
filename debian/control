@@ -1,0 +1,27 @@
+Source: ruby-async-process
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Team <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Hideki Yamane <henrich@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               gem2deb (>= 1),
+               ruby-async,
+               ruby-async-io,
+               ruby-async-rspec,
+               bundler,
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-async-process.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-async-process
+Homepage: https://github.com/socketry/async-process
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-async-process
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ${misc:Depends},
+         ${ruby:Depends},
+         ${shlibs:Depends}
+Description: asynchronous process spawning
+ Implements Process.spawn and Process.capture for async.

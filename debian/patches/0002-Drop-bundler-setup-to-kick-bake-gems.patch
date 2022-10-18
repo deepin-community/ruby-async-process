@@ -1,0 +1,19 @@
+From: Hideki Yamane <henrich@debian.org>
+Date: Sun, 29 Aug 2021 02:13:44 +0900
+Subject: Drop bundler/setup to kick bake-* gems
+
+---
+ spec/spec_helper.rb | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/spec/spec_helper.rb b/spec/spec_helper.rb
+index 4811b9a..c53d7f7 100644
+--- a/spec/spec_helper.rb
++++ b/spec/spec_helper.rb
+@@ -1,6 +1,4 @@
+ 
+-require "bundler/setup"
+-
+ # Shared rspec helpers:
+ require "async/rspec"
+ 
